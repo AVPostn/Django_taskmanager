@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Редактировать задачу.
+{% endblock %}
+
+{% block content %}
+    <h1>Редактировать задачу.</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.task }}<br>
+        {{ form.status }}<br>
+        {{ form.finalTime }}<br><br>
+        <button type="submit" class="btn btn-success">Изменить</button>
+    </form>
+{% endblock %}
